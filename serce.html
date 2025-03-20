@@ -3,21 +3,24 @@
 <head>
 <title>Pulsujące Serce</title>
 <style>
-    body {
-        background-color: #87CEEB; /* Błękitne tło */
-        background-image: url('chmury.png'); /* Ścieżka do obrazu chmur */
-        background-size: cover; /* Dopasuj obraz do rozmiaru ekranu */
-    }
+     body {
+            background-color: #87CEEB; /* Błękitne tło */
+            background-image: url('chmury.png'); /* Ścieżka do obrazu chmur */
+            background-size: cover; /* Dopasuj obraz do rozmiaru ekranu */
+            display: flex; /* Użycie flexbox do centrowania */
+            justify-content: center; /* Wyśrodkowanie w poziomie */
+            align-items: center; /* Wyśrodkowanie w pionie */
+            height: 100vh; /* Wysokość na 100% widoku */
+            margin: 0; /* Usunięcie domyślnych marginesów */
+            text-align: center; /* Wyśrodkowanie tekstu */
+        }
 
-
-.heart {
-  position: relative;
-  left: 43%;
-  top: 90px;
-  width: 50px;
-  height: 50px;
-  animation: pulse 1s infinite;
-}
+        .heart {
+            position: relative;
+            width: 10vw; /* Użycie jednostek viewport width dla responsywności */
+            height: 10vw; /* Użycie jednostek viewport width dla responsywności */
+            animation: pulse 1s infinite;
+        }
 
 .heart::before,
 .heart::after {
@@ -51,16 +54,12 @@
 }
 
 .love {
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-  display: none;
-  position: relative;
-  left: 38%;
-  top: 90px;
-  font-size: 5em;
-  font-weight: bold;
-  margin-top: 20px;
-  color: #ff0000;
-}
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            display: none;
+            font-size: 5vw; /* Użycie jednostek viewport width dla responsywności */
+            font-weight: bold;
+            color: #ff0000;
+        }
 
 .love.show {
   display: block;
